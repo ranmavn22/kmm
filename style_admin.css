@@ -1,0 +1,20 @@
+.wrapMetaBox .contentMetaBox .item p{
+    margin: 0 2px;
+}
+.wrapMetaBox{
+    margin-bottom: 50px;
+}
+.wrapMetaBox a{
+    cursor: pointer;
+}
+.wrapMetaBox .contentMetaBox .item .valueDetail{
+    width: 300px;
+}
+.wrapMetaBox .contentMetaBox .item input{
+    width: 150px;
+}
+.wrapMetaBox .contentMetaBox .item{
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,70 @@
+/*
+ Theme Name:   Generatepress Child
+ Template:     generatepress
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+*/
+
+nav li {
+    display: inline-block;
+    height: 35px;
+    line-height: 35px;
+    font-size: 15px;
+    color: #3f3f3f;
+    font-weight: bold;
+}
+main .lienhe .lienheContent .left .wpcf7-submit {
+    background-color: #ec5252;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    width: 220px;
+    text-align: center;
+    font-family: 'Roboto';
+    font-weight: bold;
+    text-align: center;
+    text-indent: initial;
+    border: none;
+}
+
+.popup .popupContent .right .wpcf7-submit {
+    background-color: #ec5252;
+    height: 63px;
+    line-height: 63px;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 26px;
+    text-transform: uppercase;
+    padding: 0 50px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    text-align: center;
+    text-indent: initial;
+    border: none;
+    width: auto;
+}
+
+@media screen and (max-width: 1136px) {
+
+}
+
+@media screen and (max-width: 800px) {
+
+}
+@media screen and (max-width: 740px) {
+
+}
+@media screen and (max-width: 640px) {
+
+}
+
+@media screen and (max-width: 549px) {
+
+}
+
+@media screen and (max-width: 360px) {
+
+}
