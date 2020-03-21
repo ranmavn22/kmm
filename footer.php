@@ -50,7 +50,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
         <div class="right">
             <p>Hello, Dreamer</p>
-            <?php echo do_shortcode('[contact-form-7 id="5" title="Contact form 1"]')?>
+            <?php echo do_shortcode('[contact-form-7 id="112" title="Contact form 2"]')?>
         </div><!--end right-->
         <div class="clear"></div>
     </div><!--end content-->

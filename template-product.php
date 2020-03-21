@@ -26,7 +26,7 @@ while (have_posts()) : the_post();
                 $term = '';
                 foreach ($terms as $term) {
                     ?>
-                    <li><a href="#" class="<?php echo $flgActive ? 'active' : '' ?>"
+                    <li><a href="#" class="<?php echo $flgActive ? 'active' : '' ?> jsGetProduct"
                            data-term="<?php echo $term->term_id ?>"><?php echo $term->name ?></a></li>
                     <?php
                     $term = $term ? $term : $term->term_id;
@@ -35,17 +35,17 @@ while (have_posts()) : the_post();
             }
             ?>
         </ul>
-        <div class="productList productList2">
+        <div class="productList productList2 jsAreaProduct">
             <?php $loop = new WP_Query(array(
                     'post_type' => 'products',
                     'posts_per_page' => -1,
-                    /*'tax_query' => array(
+                    'tax_query' => array(
                         array(
                             'taxonomy' => 'category_products',
                             'field' => 'id',
                             'terms' => $term,
                         ),
-                    ),*/
+                    )
                 )
             );
             while ($loop->have_posts()) : $loop->the_post();

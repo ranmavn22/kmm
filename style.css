@@ -5,6 +5,9 @@
  License:      GNU General Public License v2 or later
 */
 
+nav li.current-menu-item a {
+    color: #ec5252;
+}
 nav li {
     display: inline-block;
     height: 35px;
@@ -46,6 +49,41 @@ main .lienhe .lienheContent .left .wpcf7-submit {
     border: none;
     width: auto;
 }
+
+.loader {
+    display: inline-block;
+    border: 6px solid #f3f3f3;
+    /* Light grey */
+    border-top: 8px solid #3498db;
+    /* Blue */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite; }
+main .lienhe .lienheContent .right .gmap iframe{
+    max-width: 100%;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg); }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg); } }
+
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg); }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg); } }
+
+.loading {
+    text-align: center;
+    padding: 40px; }
 
 @media screen and (max-width: 1136px) {
 

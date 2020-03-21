@@ -11,6 +11,7 @@ function wpdocs_theme_name_scripts() {
     wp_enqueue_style( 'theme-style', get_stylesheet_directory_uri() . '/style.css?v=0.2' );
     wp_enqueue_script( 'slick_script', get_stylesheet_directory_uri() . '/assets/js/slick.min.js', array('jquery') );
     wp_enqueue_script( 'app_script', get_stylesheet_directory_uri() . '/assets/js/myScript.js', array('jquery') );
+    wp_enqueue_script( 'custom_script', get_stylesheet_directory_uri() . '/assets/js/script.js', array('jquery') );
     wp_localize_script( 'app_script', 'ajax_url', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
 
 }
@@ -209,3 +210,27 @@ if (!function_exists('listMemberCallback')):
     }
     add_shortcode('list_member', 'listMemberCallback');
 endif;
+
+add_action( 'wp_ajax_get_product', 'getProductCallBack' );
+add_action( 'wp_ajax_nopriv_get_product', 'getProductCallBack' );
+function getProductCallBack(){
+    $termId = $_REQUEST['termId'];
+
+    $loop = new WP_Query(array(
+            'post_type' => 'products',
+            'posts_per_page' => -1,
+            'tax_query' => array(
+                array(
+                    'taxonomy' => 'category_products',
+                    'field' => 'id',
+                    'terms' => $termId,
+                ),
+            )
+        )
+    );
+    while ($loop->have_posts()) : $loop->the_post();
+        include __DIR__ . '/includes/item_product.php';
+    endwhile;
+
+    wp_die();
+}
